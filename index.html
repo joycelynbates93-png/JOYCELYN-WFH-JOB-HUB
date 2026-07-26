@@ -29,7 +29,7 @@
   <!-- Interactive Clickable Hotspots -->
   <map name="jobhub-map">
     <!-- TOP NAVIGATION BAR -->
-    <area shape="rect" coords="320,18,370,40" href="#" alt="Home" target="_self">
+    <area shape="rect" coords="320,18,370,40" href="#" alt="Home">
     <area shape="rect" coords="390,18,485,40" href="https://www.indeed.com/q-Work-From-Home-jobs.html" alt="Job Categories" target="_blank">
     <area shape="rect" coords="505,18,605,40" href="https://www.flexjobs.com/blog/post/top-companies-with-remote-jobs/" alt="Top Companies" target="_blank">
     <area shape="rect" coords="625,18,690,40" href="https://www.indeed.com/career-advice" alt="Resources" target="_blank">
@@ -37,13 +37,11 @@
     <area shape="rect" coords="790,18,855,40" href="https://m.me/" alt="About Me" target="_blank">
     <area shape="rect" coords="875,18,930,40" href="https://m.me/" alt="Contact" target="_blank">
 
-    <!-- SEARCH BARS -->
-    <!-- Hero Search Jobs Button -->
-    <area shape="rect" coords="627,258,838,292" href="https://www.indeed.com/q-remote-jobs.html" alt="Search Jobs" target="_blank">
-    <!-- Main Input Search Bar & Button -->
-    <area shape="rect" coords="45,360,950,395" href="https://www.indeed.com/q-remote-jobs.html" alt="Search Jobs Bar" target="_blank">
+    <!-- SEARCH BARS (Direct Remote Job Searches) -->
+    <area shape="rect" coords="627,258,838,292" href="https://www.indeed.com/jobs?q=work+from+home&l=Remote" alt="Search Jobs" target="_blank">
+    <area shape="rect" coords="45,360,950,395" href="https://www.indeed.com/jobs?q=work+from+home&l=Remote" alt="Search Jobs Bar" target="_blank">
 
-    <!-- BROWSE JOB CATEGORIES (VIEW JOBS BUTTONS) -->
+    <!-- BROWSE JOB CATEGORIES -->
     <!-- Customer Service -->
     <area shape="rect" coords="75,518,200,541" href="https://www.indeed.com/jobs?q=customer+service&l=Remote" alt="Customer Service Jobs" target="_blank">
     
@@ -68,17 +66,17 @@
     <!-- Freelance & Independent -->
     <area shape="rect" coords="775,645,900,668" href="https://www.upwork.com/freelance-jobs/" alt="Freelance Jobs" target="_blank">
 
-    <!-- TOP COMPANIES HIRING REMOTELY -->
-    <area shape="rect" coords="41,757,120,773" href="https://www.amazon.jobs/en/locations/virtual-locations" alt="Amazon Remote Jobs" target="_blank">
-    <area shape="rect" coords="158,757,237,773" href="https://careers.unitedhealthgroup.com/search-jobs?acm=ALL&ascf=%5B%7B%22key%22%3A%22custom_fields.WorkSetting%22%2C%22value%22%3A%22Remote%22%7D%5D" alt="UnitedHealth Group Jobs" target="_blank">
-    <area shape="rect" coords="278,757,357,773" href="https://jobs.cvshealth.com/us/en/search-results?keywords=Customer%20Service%20Representative" alt="CVS Health Jobs" target="_blank">
-    <area shape="rect" coords="394,757,473,773" href="https://jobs.cigna.com/us/en/search-results?keywords=Remote" alt="Cigna Jobs" target="_blank">
-    <area shape="rect" coords="511,757,590,773" href="https://careers.humana.com/us/en/search-results?keywords=Remote" alt="Humana Jobs" target="_blank">
-    <area shape="rect" coords="627,757,706,773" href="https://jobs.telusdigital.com/" alt="Telus Jobs" target="_blank">
-    <area shape="rect" coords="745,757,824,773" href="https://jobs.concentrix.com/global/en/search-results?keywords=Remote" alt="Concentrix Jobs" target="_blank">
-    <area shape="rect" coords="864,757,943,773" href="https://www.teksystems.com/en/careers/search-jobs" alt="TEKsystems Jobs" target="_blank">
+    <!-- DIRECT COMPANY CAREER / HIRING HOMEPAGES -->
+    <area shape="rect" coords="41,757,120,773" href="https://www.amazon.jobs/en/locations/virtual-locations" alt="Amazon Careers" target="_blank">
+    <area shape="rect" coords="158,757,237,773" href="https://careers.unitedhealthgroup.com/" alt="UnitedHealth Group Careers" target="_blank">
+    <area shape="rect" coords="278,757,357,773" href="https://jobs.cvshealth.com/" alt="CVS Health Careers" target="_blank">
+    <area shape="rect" coords="394,757,473,773" href="https://jobs.cigna.com/" alt="Cigna Careers" target="_blank">
+    <area shape="rect" coords="511,757,590,773" href="https://careers.humana.com/" alt="Humana Careers" target="_blank">
+    <area shape="rect" coords="627,757,706,773" href="https://jobs.telusdigital.com/" alt="Telus International Careers" target="_blank">
+    <area shape="rect" coords="745,757,824,773" href="https://jobs.concentrix.com/" alt="Concentrix Careers" target="_blank">
+    <area shape="rect" coords="864,757,943,773" href="https://www.teksystems.com/en/careers" alt="TEKsystems Careers" target="_blank">
     
-    <!-- View More Companies Button -->
+    <!-- View More Companies -->
     <area shape="rect" coords="397,782,577,804" href="https://www.flexjobs.com/blog/post/top-companies-with-remote-jobs/" alt="View More Companies" target="_blank">
 
     <!-- JOB SEARCH RESOURCES -->
@@ -89,9 +87,14 @@
     <area shape="rect" coords="30,949,328,975" href="https://www.indeed.com/career-advice/career-development/time-management-skills" alt="Time Management Tips" target="_blank">
 
     <!-- JOB APPLICATIONS CHECKLIST -->
-    <!-- Download Checklist Button -->
     <area shape="rect" coords="401,929,625,948" href="https://www.indeed.com/career-advice/finding-a-job/job-application-checklist" alt="Download Application Checklist" target="_blank">
   </map>
+
+  <!-- Script to automatically resize coordinates when the screen scales -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+  <script>
+    imageMapResize();
+  </script>
 
 </body>
 </html>

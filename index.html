@@ -14,89 +14,85 @@
       align-items: center;
       min-height: 100vh;
     }
-    img {
-      max-width: 100%;
+    
+    .hub-container {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hub-container img {
+      width: 100%;
       height: auto;
       display: block;
+    }
+
+    /* Hotspot Overlay Styling */
+    .hotspot {
+      position: absolute;
+      display: block;
+      text-indent: -9999px;
+      z-index: 10;
     }
   </style>
 </head>
 <body>
 
-  <!-- Live Image -->
-  <img src="WFH.png" usemap="#jobhub-map" alt="Joycelyn's Work From Home Job Hub">
+  <div class="hub-container">
+    <!-- Main Graphic -->
+    <img src="WFH.png" alt="Joycelyn's Work From Home Job Hub">
 
-  <!-- Interactive Clickable Hotspots -->
-  <map name="jobhub-map">
-    <!-- TOP NAVIGATION BAR -->
-    <area shape="rect" coords="300,5,375,45" href="#" alt="Home">
-    <area shape="rect" coords="380,5,490,45" href="https://www.ttecjobs.com/en/work-from-home" alt="Job Categories" target="_blank">
-    <area shape="rect" coords="495,5,610,45" href="https://jobs.concentrix.com/job-search/?country=United+States+of+America&wah=1" alt="Top Companies" target="_blank">
-    <area shape="rect" coords="615,5,695,45" href="https://jobs.workingsolutions.com/faq_category/application-process/" alt="Resources" target="_blank">
-    <area shape="rect" coords="700,5,775,45" href="https://vxi.com/careers/" alt="Favorites" target="_blank">
-    <area shape="rect" coords="780,5,860,45" href="https://m.me/" alt="About Me" target="_blank">
-    <area shape="rect" coords="865,5,945,45" href="https://m.me/" alt="Contact" target="_blank">
+    <!-- TOP NAVIGATION LINKS -->
+    <a href="#" class="hotspot" style="top: 1%; left: 32%; width: 6%; height: 3%;">Home</a>
+    <a href="https://www.ttecjobs.com/en/work-from-home" target="_blank" class="hotspot" style="top: 1%; left: 39%; width: 10%; height: 3%;">Job Categories</a>
+    <a href="https://jobs.concentrix.com/job-search/?country=United+States+of+America&wah=1" target="_blank" class="hotspot" style="top: 1%; left: 50%; width: 11%; height: 3%;">Top Companies</a>
+    <a href="https://jobs.workingsolutions.com/faq_category/application-process/" target="_blank" class="hotspot" style="top: 1%; left: 62%; width: 8%; height: 3%;">Resources</a>
+    <a href="https://vxi.com/careers/" target="_blank" class="hotspot" style="top: 1%; left: 71%; width: 7%; height: 3%;">Favorites</a>
+    <a href="https://m.me/" target="_blank" class="hotspot" style="top: 1%; left: 79%; width: 7%; height: 3%;">About Me</a>
+    <a href="https://m.me/" target="_blank" class="hotspot" style="top: 1%; left: 87%; width: 6%; height: 3%;">Contact</a>
 
-    <!-- HERO SEARCH BUTTON & MAIN SEARCH BAR -->
-    <area shape="rect" coords="600,240,860,310" href="https://www.ttecjobs.com/en/work-from-home" alt="Search Jobs" target="_blank">
-    <area shape="rect" coords="30,330,970,410" href="https://www.ttecjobs.com/en/work-from-home" alt="Search Jobs Bar" target="_blank">
+    <!-- SEARCH BARS -->
+    <a href="https://www.ttecjobs.com/en/work-from-home" target="_blank" class="hotspot" style="top: 25%; left: 62%; width: 22%; height: 5%;">Hero Search</a>
+    <a href="https://www.ttecjobs.com/en/work-from-home" target="_blank" class="hotspot" style="top: 35%; left: 4%; width: 92%; height: 6%;">Main Search Bar</a>
 
-    <!-- BROWSE JOB CATEGORIES -->
-    <area shape="rect" coords="20,415,250,545" href="https://jobs.concentrix.com/job-search/?country=United+States+of+America&wah=1" alt="Customer Service Jobs" target="_blank">
-    <area shape="rect" coords="255,415,475,545" href="https://sagilityhealth.com/careers/" alt="Healthcare Jobs" target="_blank">
-    <area shape="rect" coords="480,415,705,545" href="https://jobs.cvshealth.com/us/en/customer-care-jobs" alt="Scheduling Jobs" target="_blank">
-    <area shape="rect" coords="710,415,970,545" href="https://www.ttecjobs.com/en/work-from-home" alt="Technical Support Jobs" target="_blank">
+    <!-- JOB CATEGORY CARDS -->
+    <a href="https://jobs.concentrix.com/job-search/?country=United+States+of+America&wah=1" target="_blank" class="hotspot" style="top: 43%; left: 3%; width: 22%; height: 12%;">Customer Service</a>
+    <a href="https://sagilityhealth.com/careers/" target="_blank" class="hotspot" style="top: 43%; left: 26%; width: 22%; height: 12%;">Healthcare</a>
+    <a href="https://jobs.cvshealth.com/us/en/customer-care-jobs" target="_blank" class="hotspot" style="top: 43%; left: 49%; width: 22%; height: 12%;">Scheduling</a>
+    <a href="https://www.ttecjobs.com/en/work-from-home" target="_blank" class="hotspot" style="top: 43%; left: 73%; width: 23%; height: 12%;">Tech Support</a>
 
-    <area shape="rect" coords="20,550,250,680" href="https://vxi.com/careers/" alt="Leadership Jobs" target="_blank">
-    <area shape="rect" coords="255,550,475,680" href="https://jobs.workingsolutions.com/" alt="Sales Jobs" target="_blank">
-    <area shape="rect" coords="480,550,705,680" href="https://careers.humana.com/us/en/search-results?keywords=Remote" alt="Jobs With Pay Info" target="_blank">
-    <area shape="rect" coords="710,550,970,680" href="https://jobs.workingsolutions.com/" alt="Freelance Jobs" target="_blank">
+    <a href="https://vxi.com/careers/" target="_blank" class="hotspot" style="top: 56%; left: 3%; width: 22%; height: 12%;">Leadership</a>
+    <a href="https://jobs.workingsolutions.com/" target="_blank" class="hotspot" style="top: 56%; left: 26%; width: 22%; height: 12%;">Sales</a>
+    <a href="https://careers.humana.com/us/en/search-results?keywords=Remote" target="_blank" class="hotspot" style="top: 56%; left: 49%; width: 22%; height: 12%;">Jobs With Pay</a>
+    <a href="https://jobs.workingsolutions.com/" target="_blank" class="hotspot" style="top: 56%; left: 73%; width: 23%; height: 12%;">Freelance</a>
 
-    <!-- EXPANDED TOP COMPANY LOGOS (LARGE CLICKABLE ZONES) -->
-    <!-- Amazon Virtual Jobs -->
-    <area shape="rect" coords="10,685,130,810" href="https://www.amazon.jobs/en/locations/virtual-locations" alt="Amazon Careers" target="_blank">
-    <!-- UnitedHealth Group -->
-    <area shape="rect" coords="131,685,250,810" href="https://careers.unitedhealthgroup.com/location/remote-jobs/34088/1000000000100/2" alt="UnitedHealth Group Careers" target="_blank">
-    <!-- CVS Health -->
-    <area shape="rect" coords="251,685,370,810" href="https://jobs.cvshealth.com/us/en/search-results?keywords=Remote" alt="CVS Health Careers" target="_blank">
-    <!-- Cigna -->
-    <area shape="rect" coords="371,685,490,810" href="https://jobs.thecignagroup.com/us/en/remote-jobs" alt="Cigna Careers" target="_blank">
-    <!-- Humana -->
-    <area shape="rect" coords="491,685,610,810" href="https://careers.humana.com/us/en/search-results?keywords=Remote" alt="Humana Careers" target="_blank">
-    <!-- Telus International -->
-    <area shape="rect" coords="611,685,730,810" href="https://www.telusinternational.com/careers" alt="Telus International Careers" target="_blank">
-    <!-- Concentrix -->
-    <area shape="rect" coords="731,685,850,810" href="https://jobs.concentrix.com/job-search/?country=United+States+of+America&wah=1" alt="Concentrix Careers" target="_blank">
-    <!-- TEKsystems -->
-    <area shape="rect" coords="851,685,980,810" href="https://www.teksystems.com/en/careers" alt="TEKsystems Careers" target="_blank">
+    <!-- TOP COMPANIES HIRING REMOTELY (LOGOS & VIEW JOBS BUTTONS) -->
+    <a href="https://www.amazon.jobs/en/locations/virtual-locations" target="_blank" class="hotspot" style="top: 70%; left: 2%; width: 11%; height: 8%;">Amazon Card</a>
+    <a href="https://careers.unitedhealthgroup.com/location/remote-jobs/34088/1000000000100/2" target="_blank" class="hotspot" style="top: 70%; left: 14%; width: 11%; height: 8%;">UnitedHealth Group Card</a>
+    <a href="https://jobs.cvshealth.com/us/en/search-results?keywords=Remote" target="_blank" class="hotspot" style="top: 70%; left: 26%; width: 11%; height: 8%;">CVS Health Card</a>
+    <a href="https://jobs.thecignagroup.com/us/en/remote-jobs" target="_blank" class="hotspot" style="top: 70%; left: 38%; width: 11%; height: 8%;">Cigna Card</a>
+    <a href="https://careers.humana.com/us/en/search-results?keywords=Remote" target="_blank" class="hotspot" style="top: 70%; left: 50%; width: 11%; height: 8%;">Humana Card</a>
+    <a href="https://www.telusinternational.com/careers" target="_blank" class="hotspot" style="top: 70%; left: 62%; width: 11%; height: 8%;">Telus International Card</a>
+    <a href="https://jobs.concentrix.com/job-search/?country=United+States+of+America&wah=1" target="_blank" class="hotspot" style="top: 70%; left: 74%; width: 11%; height: 8%;">Concentrix Card</a>
+    <a href="https://www.teksystems.com/en/careers" target="_blank" class="hotspot" style="top: 70%; left: 86%; width: 12%; height: 8%;">TEKsystems Card</a>
 
-    <!-- View More Companies Button -->
-    <area shape="rect" coords="350,780,630,825" href="https://sagilityhealth.com/careers/" alt="View More Companies - Sagility Health" target="_blank">
+    <!-- VIEW MORE COMPANIES BUTTON -->
+    <a href="https://sagilityhealth.com/careers/" target="_blank" class="hotspot" style="top: 78.5%; left: 40%; width: 20%; height: 3%;">View More Companies</a>
 
-    <!-- JOB SEARCH RESOURCES (ENTIRE LEFT COLUMN SIDEBAR) -->
-    <!-- Resume Builder -->
-    <area shape="rect" coords="10,826,360,860" href="https://www.usa.gov/resume" alt="Resume Builder Direct" target="_blank">
-    <!-- Interview Tips -->
-    <area shape="rect" coords="10,861,360,890" href="https://www.ttecjobs.com/en/faqs" alt="Interview Tips Direct" target="_blank">
-    <!-- Cover Letter Templates -->
-    <area shape="rect" coords="10,891,360,920" href="https://www.usa.gov/resume" alt="Cover Letter Templates Direct" target="_blank">
-    <!-- Work From Home Setup Tips -->
-    <area shape="rect" coords="10,921,360,950" href="https://jobs.workingsolutions.com/faq_category/application-process/" alt="WFH Setup Tips Direct" target="_blank">
-    <!-- Time Management Tips -->
-    <area shape="rect" coords="10,951,360,1000" href="https://jobs.workingsolutions.com/faq_category/application-process/" alt="Time Management Tips Direct" target="_blank">
+    <!-- JOB SEARCH RESOURCES (INDIVIDUAL CLICKABLE LINKS) -->
+    <a href="https://www.usa.gov/resume" target="_blank" class="hotspot" style="top: 85%; left: 3%; width: 30%; height: 2.5%;">Resume Builder</a>
+    <a href="https://www.ttecjobs.com/en/faqs" target="_blank" class="hotspot" style="top: 88%; left: 3%; width: 30%; height: 2.5%;">Interview Tips</a>
+    <a href="https://www.usa.gov/resume" target="_blank" class="hotspot" style="top: 91%; left: 3%; width: 30%; height: 2.5%;">Cover Letter Templates</a>
+    <a href="https://jobs.workingsolutions.com/faq_category/application-process/" target="_blank" class="hotspot" style="top: 94%; left: 3%; width: 30%; height: 2.5%;">WFH Setup Tips</a>
+    <a href="https://jobs.workingsolutions.com/faq_category/application-process/" target="_blank" class="hotspot" style="top: 97%; left: 3%; width: 30%; height: 2.5%;">Time Management Tips</a>
 
-    <!-- JOB APPLICATIONS CHECKLIST (EXPANDED BUTTON & CONTAINER BOX) -->
-    <area shape="rect" coords="365,826,660,990" href="https://www.dol.gov/sites/dolgov/files/eta/indprogram/pdf/Job_Search_Checklist.pdf" alt="Download Remote Job Application Checklist PDF" target="_blank">
+    <!-- JOB APPLICATIONS CHECKLIST (DOWNLOAD CHECKLIST BUTTON) -->
+    <a href="https://www.dol.gov/sites/dolgov/files/eta/indprogram/pdf/Job_Search_Checklist.pdf" target="_blank" class="hotspot" style="top: 93.5%; left: 40%; width: 24%; height: 4%;">Download Checklist PDF</a>
 
     <!-- SAVE YOUR FAVORITE JOBS CARD -->
-    <area shape="rect" coords="665,815,980,990" href="https://vxi.com/careers/" alt="Save Favorites" target="_blank">
-  </map>
-
-  <!-- Responsive coordinates script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
-  <script>
-    imageMapResize();
-  </script>
+    <a href="https://vxi.com/careers/" target="_blank" class="hotspot" style="top: 91%; left: 72%; width: 22%; height: 5%;">View Saved Jobs</a>
+  </div>
 
 </body>
 </html>

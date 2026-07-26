@@ -7,10 +7,11 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
+      padding: 20px 0;
       background-color: #fca5d2;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
       min-height: 100vh;
     }
@@ -26,6 +27,8 @@
       width: 100%;
       height: auto;
       display: block;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
     /* Hotspot Overlay Styling */
@@ -34,6 +37,81 @@
       display: block;
       text-indent: -9999px;
       z-index: 10;
+    }
+
+    /* Directory Container Styling */
+    .directory-container {
+      width: 100%;
+      max-width: 960px;
+      margin: 30px auto 10px auto;
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      box-sizing: border-box;
+    }
+
+    .directory-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .directory-header h2 {
+      color: #d63384;
+      margin: 0 0 8px 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .directory-header p {
+      color: #666;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .category-title {
+      color: #b81268;
+      font-size: 16px;
+      font-weight: 700;
+      border-bottom: 2px solid #f8c0d8;
+      padding-bottom: 5px;
+      margin-top: 25px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .company-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 10px;
+    }
+
+    .company-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff0f6;
+      border: 1px solid #fcc2d7;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #333;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .company-card:hover {
+      background-color: #d63384;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 3px 8px rgba(214, 51, 132, 0.3);
+    }
+
+    .company-card span {
+      font-size: 11px;
+      opacity: 0.7;
     }
   </style>
 </head>
@@ -53,19 +131,19 @@
     <a href="https://m.me/" target="_blank" class="hotspot" style="top: 1%; left: 87%; width: 6%; height: 3%;">Contact</a>
 
     <!-- SEARCH BARS -->
-    <a href="https://careers.kellyocg.com/" target="_blank" class="hotspot" style="top: 25%; left: 62%; width: 22%; height: 5%;">Hero Search (KellyConnect)</a>
-    <a href="https://teleperformance.searchgreatcareers.com/location/remote-jobs/41925/1000000000100/2" target="_blank" class="hotspot" style="top: 35%; left: 4%; width: 92%; height: 6%;">Main Search Bar (Teleperformance)</a>
+    <a href="https://careers.kellyocg.com/" target="_blank" class="hotspot" style="top: 25%; left: 62%; width: 22%; height: 5%;">Hero Search</a>
+    <a href="https://teleperformance.searchgreatcareers.com/location/remote-jobs/41925/1000000000100/2" target="_blank" class="hotspot" style="top: 35%; left: 4%; width: 92%; height: 6%;">Main Search Bar</a>
 
     <!-- JOB CATEGORY CARDS -->
-    <a href="https://jobs.concentrix.com/job-search/?country=United+States+of+America&wah=1" target="_blank" class="hotspot" style="top: 43%; left: 3%; width: 22%; height: 12%;">Customer Service (Concentrix)</a>
-    <a href="https://sagilityhealth.com/careers/" target="_blank" class="hotspot" style="top: 43%; left: 26%; width: 22%; height: 12%;">Healthcare (Sagility)</a>
-    <a href="https://jobs.cvshealth.com/us/en/customer-care-jobs" target="_blank" class="hotspot" style="top: 43%; left: 49%; width: 22%; height: 12%;">Scheduling (CVS Health)</a>
-    <a href="https://join.liveops.com/opportunities/" target="_blank" class="hotspot" style="top: 43%; left: 73%; width: 23%; height: 12%;">Tech Support (Liveops)</a>
+    <a href="https://jobs.concentrix.com/job-search/?country=United+States+of+America&wah=1" target="_blank" class="hotspot" style="top: 43%; left: 3%; width: 22%; height: 12%;">Customer Service</a>
+    <a href="https://sagilityhealth.com/careers/" target="_blank" class="hotspot" style="top: 43%; left: 26%; width: 22%; height: 12%;">Healthcare</a>
+    <a href="https://jobs.cvshealth.com/us/en/customer-care-jobs" target="_blank" class="hotspot" style="top: 43%; left: 49%; width: 22%; height: 12%;">Scheduling</a>
+    <a href="https://join.liveops.com/opportunities/" target="_blank" class="hotspot" style="top: 43%; left: 73%; width: 23%; height: 12%;">Tech Support</a>
 
-    <a href="https://vxi.com/careers/" target="_blank" class="hotspot" style="top: 56%; left: 3%; width: 22%; height: 12%;">Leadership (VXI Global)</a>
-    <a href="https://jobs.workingsolutions.com/" target="_blank" class="hotspot" style="top: 56%; left: 26%; width: 22%; height: 12%;">Sales (Working Solutions)</a>
-    <a href="https://careers.humana.com/us/en/search-results?keywords=Remote" target="_blank" class="hotspot" style="top: 56%; left: 49%; width: 22%; height: 12%;">Jobs With Pay (Humana)</a>
-    <a href="https://careers.kellyocg.com/" target="_blank" class="hotspot" style="top: 56%; left: 73%; width: 23%; height: 12%;">Freelance / Remote (KellyConnect)</a>
+    <a href="https://vxi.com/careers/" target="_blank" class="hotspot" style="top: 56%; left: 3%; width: 22%; height: 12%;">Leadership</a>
+    <a href="https://jobs.workingsolutions.com/" target="_blank" class="hotspot" style="top: 56%; left: 26%; width: 22%; height: 12%;">Sales</a>
+    <a href="https://careers.humana.com/us/en/search-results?keywords=Remote" target="_blank" class="hotspot" style="top: 56%; left: 49%; width: 22%; height: 12%;">Jobs With Pay</a>
+    <a href="https://careers.kellyocg.com/" target="_blank" class="hotspot" style="top: 56%; left: 73%; width: 23%; height: 12%;">Freelance</a>
 
     <!-- TOP COMPANIES HIRING REMOTELY -->
     <a href="https://www.amazon.jobs/en/locations/virtual-locations" target="_blank" class="hotspot" style="top: 70%; left: 2%; width: 11%; height: 8%;">Amazon</a>
@@ -78,11 +156,11 @@
     <a href="https://vxi.com/careers/" target="_blank" class="hotspot" style="top: 70%; left: 86%; width: 12%; height: 8%;">VXI Global</a>
 
     <!-- VIEW MORE COMPANIES BUTTON -->
-    <a href="https://www.continuumglobal.com/join-us/" target="_blank" class="hotspot" style="top: 78.5%; left: 40%; width: 20%; height: 3%;">View More Companies (Continuum Global)</a>
+    <a href="#full-directory" class="hotspot" style="top: 78.5%; left: 40%; width: 20%; height: 3%;">View More Companies</a>
 
     <!-- JOB SEARCH RESOURCES -->
     <a href="https://www.usa.gov/resume" target="_blank" class="hotspot" style="top: 85%; left: 3%; width: 30%; height: 2.5%;">Resume Builder</a>
-    <a href="https://join.liveops.com/opportunities/" target="_blank" class="hotspot" style="top: 88%; left: 3%; width: 30%; height: 2.5%;">Interview Tips (Liveops Jobs)</a>
+    <a href="https://join.liveops.com/opportunities/" target="_blank" class="hotspot" style="top: 88%; left: 3%; width: 30%; height: 2.5%;">Interview Tips</a>
     <a href="https://www.usa.gov/resume" target="_blank" class="hotspot" style="top: 91%; left: 3%; width: 30%; height: 2.5%;">Cover Letter Templates</a>
     <a href="https://jobs.workingsolutions.com/faq_category/application-process/" target="_blank" class="hotspot" style="top: 94%; left: 3%; width: 30%; height: 2.5%;">WFH Setup Tips</a>
     <a href="https://jobs.workingsolutions.com/faq_category/application-process/" target="_blank" class="hotspot" style="top: 97%; left: 3%; width: 30%; height: 2.5%;">Time Management Tips</a>
@@ -91,7 +169,95 @@
     <a href="https://www.dol.gov/sites/dolgov/files/eta/indprogram/pdf/Job_Search_Checklist.pdf" target="_blank" class="hotspot" style="top: 93.5%; left: 40%; width: 24%; height: 4%;">Download Checklist PDF</a>
 
     <!-- SAVE YOUR FAVORITE JOBS CARD -->
-    <a href="https://careers.kellyocg.com/" target="_blank" class="hotspot" style="top: 91%; left: 72%; width: 22%; height: 5%;">View Saved Jobs (KellyConnect)</a>
+    <a href="https://careers.kellyocg.com/" target="_blank" class="hotspot" style="top: 91%; left: 72%; width: 22%; height: 5%;">View Saved Jobs</a>
+  </div>
+
+  <!-- COMPLETE 60 COMPANY WFH DIRECTORY -->
+  <div class="directory-container" id="full-directory">
+    <div class="directory-header">
+      <h2>Complete Verified WFH Employer Directory</h2>
+      <p>Direct application links for all 60 legitimate remote companies.</p>
+    </div>
+
+    <!-- BPOs & Customer Experience -->
+    <div class="category-title">BPO & Customer Service Solutions</div>
+    <div class="company-grid">
+      <a href="https://www.ttecjobs.com/en/work-from-home" target="_blank" class="company-card">1. TTEC <span>Apply ↗</span></a>
+      <a href="https://teleperformance.searchgreatcareers.com/location/remote-jobs/41925/1000000000100/2" target="_blank" class="company-card">2. Teleperformance <span>Apply ↗</span></a>
+      <a href="https://jobs.concentrix.com/job-search/?country=United+States+of+America&wah=1" target="_blank" class="company-card">3. Concentrix <span>Apply ↗</span></a>
+      <a href="https://jobs.foundever.com/content/Find-a-Job/" target="_blank" class="company-card">4. Foundever <span>Apply ↗</span></a>
+      <a href="https://www.alorica.com/careers/" target="_blank" class="company-card">5. Alorica <span>Apply ↗</span></a>
+      <a href="https://jobs.sutherlandglobal.com/" target="_blank" class="company-card">6. Sutherland <span>Apply ↗</span></a>
+      <a href="https://vxi.com/careers/" target="_blank" class="company-card">7. VXI Global <span>Apply ↗</span></a>
+      <a href="https://www.conduent.com/customer-experience-management/work-at-home/" target="_blank" class="company-card">8. Conduent <span>Apply ↗</span></a>
+      <a href="https://taskus.com/careers/" target="_blank" class="company-card">9. TaskUs <span>Apply ↗</span></a>
+      <a href="https://www.weareeverise.com/careers/" target="_blank" class="company-card">10. Everise <span>Apply ↗</span></a>
+      <a href="https://www.qualfon.com/careers/" target="_blank" class="company-card">11. Qualfon <span>Apply ↗</span></a>
+      <a href="https://intouchcx.com/careers/" target="_blank" class="company-card">12. IntouchCX <span>Apply ↗</span></a>
+      <a href="https://resultscx.com/careers/" target="_blank" class="company-card">13. ResultsCX <span>Apply ↗</span></a>
+      <a href="https://probecx.com/careers/" target="_blank" class="company-card">14. Probe CX <span>Apply ↗</span></a>
+      <a href="https://www.iqor.com/careers" target="_blank" class="company-card">15. iQor <span>Apply ↗</span></a>
+      <a href="https://www.firstsource.com/careers/" target="_blank" class="company-card">16. Firstsource <span>Apply ↗</span></a>
+      <a href="https://www.exlservice.com/careers" target="_blank" class="company-card">17. EXL <span>Apply ↗</span></a>
+      <a href="https://www.genpact.com/careers" target="_blank" class="company-card">18. Genpact <span>Apply ↗</span></a>
+      <a href="https://www.wns.com/careers" target="_blank" class="company-card">19. WNS <span>Apply ↗</span></a>
+      <a href="https://maximus.com/careers" target="_blank" class="company-card">20. Maximus <span>Apply ↗</span></a>
+    </div>
+
+    <!-- Independent Contractor & Gig Platforms -->
+    <div class="category-title">Contractor & Flexible Gig Platforms</div>
+    <div class="company-grid">
+      <a href="https://jobs.workingsolutions.com/" target="_blank" class="company-card">21. Working Solutions <span>Apply ↗</span></a>
+      <a href="https://join.liveops.com/opportunities/" target="_blank" class="company-card">22. Liveops <span>Apply ↗</span></a>
+      <a href="https://www.ariseworkfromhome.com/" target="_blank" class="company-card">23. Arise <span>Apply ↗</span></a>
+      <a href="https://nexrep.com/apply/" target="_blank" class="company-card">24. NexRep <span>Apply ↗</span></a>
+      <a href="https://omniinteractions.com/join/" target="_blank" class="company-card">25. Omni Interactions <span>Apply ↗</span></a>
+      <a href="https://broadpath.com/careers/" target="_blank" class="company-card">26. BroadPath <span>Apply ↗</span></a>
+      <a href="https://careers.kellyocg.com/" target="_blank" class="company-card">27. Kelly Services <span>Apply ↗</span></a>
+    </div>
+
+    <!-- Healthcare & Health Insurance -->
+    <div class="category-title">Healthcare & Health Insurance</div>
+    <div class="company-grid">
+      <a href="https://jobs.cvshealth.com/us/en/search-results?keywords=Remote" target="_blank" class="company-card">28. CVS Health <span>Apply ↗</span></a>
+      <a href="https://jobs.thecignagroup.com/us/en/remote-jobs" target="_blank" class="company-card">29. The Cigna Group <span>Apply ↗</span></a>
+      <a href="https://careers.unitedhealthgroup.com/location/remote-jobs/34088/1000000000100/2" target="_blank" class="company-card">30. UnitedHealth Group <span>Apply ↗</span></a>
+      <a href="https://www.optum.com/careers.html" target="_blank" class="company-card">31. Optum <span>Apply ↗</span></a>
+      <a href="https://careers.humana.com/us/en/search-results?keywords=Remote" target="_blank" class="company-card">32. Humana <span>Apply ↗</span></a>
+      <a href="https://careers.elevancehealth.com/" target="_blank" class="company-card">33. Elevance Health <span>Apply ↗</span></a>
+      <a href="https://careers.molinahealthcare.com/" target="_blank" class="company-card">34. Molina Healthcare <span>Apply ↗</span></a>
+      <a href="https://r1rcm.com/careers/" target="_blank" class="company-card">35. R1 RCM <span>Apply ↗</span></a>
+      <a href="https://sagilityhealth.com/careers/" target="_blank" class="company-card">36. Sagility <span>Apply ↗</span></a>
+      <a href="https://pinsourcing.com/jobs/" target="_blank" class="company-card">37. Pearl Interactive <span>Apply ↗</span></a>
+      <a href="https://jobs.centene.com/" target="_blank" class="company-card">38. Centene <span>Apply ↗</span></a>
+      <a href="https://jobs.cvshealth.com/us/en/search-results?keywords=Aetna+Remote" target="_blank" class="company-card">39. Aetna <span>Apply ↗</span></a>
+      <a href="https://about.kaiserpermanente.org/careers" target="_blank" class="company-card">40. Kaiser Permanente <span>Apply ↗</span></a>
+    </div>
+
+    <!-- Corporate, Tech, Banking & Travel -->
+    <div class="category-title">Corporate, Tech, Finance & E-Commerce</div>
+    <div class="company-grid">
+      <a href="https://www.amazon.jobs/en/locations/virtual-locations" target="_blank" class="company-card">41. Amazon Jobs <span>Apply ↗</span></a>
+      <a href="https://jobs.apple.com/en-us/search?team=home-advisor" target="_blank" class="company-card">42. Apple Jobs <span>Apply ↗</span></a>
+      <a href="https://jobs.dell.com/remote-jobs" target="_blank" class="company-card">43. Dell Technologies <span>Apply ↗</span></a>
+      <a href="https://careers.microsoft.com/v2/global/en/home.html" target="_blank" class="company-card">44. Microsoft Careers <span>Apply ↗</span></a>
+      <a href="https://aexp.fourbusiness.com/careers" target="_blank" class="company-card">45. American Express <span>Apply ↗</span></a>
+      <a href="https://www.capitalonecareers.com/" target="_blank" class="company-card">46. Capital One <span>Apply ↗</span></a>
+      <a href="https://careers.pnc.com/" target="_blank" class="company-card">47. PNC Careers <span>Apply ↗</span></a>
+      <a href="https://www.wellsfargojobs.com/" target="_blank" class="company-card">48. Wells Fargo <span>Apply ↗</span></a>
+      <a href="https://jobs.fidelity.com/" target="_blank" class="company-card">49. Fidelity Careers <span>Apply ↗</span></a>
+      <a href="https://jobs.schwabjobs.com/" target="_blank" class="company-card">50. Charles Schwab <span>Apply ↗</span></a>
+      <a href="https://www.telusdigital.com/careers" target="_blank" class="company-card">51. TELUS Digital <span>Apply ↗</span></a>
+      <a href="https://jobs.adp.com/" target="_blank" class="company-card">52. ADP <span>Apply ↗</span></a>
+      <a href="https://aquent.com/find-work" target="_blank" class="company-card">53. Aquent <span>Apply ↗</span></a>
+      <a href="https://www.roberthalf.com/us/en/jobs" target="_blank" class="company-card">54. Robert Half <span>Apply ↗</span></a>
+      <a href="https://careers.united.com/" target="_blank" class="company-card">55. United Airlines <span>Apply ↗</span></a>
+      <a href="https://jobs.aa.com/" target="_blank" class="company-card">56. American Airlines <span>Apply ↗</span></a>
+      <a href="https://careers.marriott.com/" target="_blank" class="company-card">57. Marriott Careers <span>Apply ↗</span></a>
+      <a href="https://jobs.hilton.com/" target="_blank" class="company-card">58. Hilton Careers <span>Apply ↗</span></a>
+      <a href="https://www.chewy.com/jobs" target="_blank" class="company-card">59. Chewy Careers <span>Apply ↗</span></a>
+      <a href="https://www.wayfair.com/careers" target="_blank" class="company-card">60. Wayfair Careers <span>Apply ↗</span></a>
+    </div>
   </div>
 
 </body>
